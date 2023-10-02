@@ -10,17 +10,27 @@ public class Number2 {
 		Scanner input=new Scanner(System.in);
 		System.out.println("Please enter your name");
 		String name=input.nextLine();
-		
+		/*
+		 * In the main method the user will have to enter in their name an their score.
+		 * The system will then call the main source of code from the system method.
+		 */
 		System.out.println("Please enter in your score");
 		int score =input.nextInt();
-		
-		system(name,score);
+		/*
+		 * Once I declared the parameters in the main method then I 
+		 * call these two parameters which can be seen down below.
+		 */
+		system(name,score);//calls the system method
 	}
 	
 	public static void system(String name,int score)
 	{
+		//< is for less while > is for greater plus = is for equals
 		if(score <100 && score >=85)
-		{
+		{/*
+		*&& is for making sure that both conditions are met
+		*it will then be true
+		*/
 			System.out.println(name+" result is: A");
 		}
 		else if(score <85 && score >=65)
@@ -45,9 +55,15 @@ public class Number2 {
 		
 		else
 		{
+			/*
+			 * This else statement is for if the user adds a number 
+			 * that is not part of the grading system 
+			 * for example entering the number 111 the system will say
+			 * invalid option
+			 */
 			System.out.println("Invalid option "+name);
+			System.exit(0);
+			//the system will shut down because of wrong attempt
 		}
-		
-		
 	}
 }
