@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class VendingMachineApplication{
+public class VendingMachine{
 
 	static Scanner input = new Scanner(System.in);
 	static int qtyCoke = 10;
@@ -90,19 +90,19 @@ public class VendingMachineApplication{
 	
 	public static void payment(String productChoice,double transactionprice)
 	{
-		System.out.println("Enter your panyment.Balance is �"+transactionprice);
+		System.out.println("Enter your panyment.Balance is €"+transactionprice);
 		
 		double moneyEntered = input.nextDouble();//Please enter payment
 		
 		while(moneyEntered<transactionprice)
 		{
-			System.out.println("Enter payment. Balance remaining is "+(transactionprice-moneyEntered));
+			System.out.println("Enter payment. Balance remaining is €"+(transactionprice-moneyEntered));
 			moneyEntered = moneyEntered+ input.nextDouble();
 		}
 		//Product has been bought
 		if(moneyEntered>transactionprice)
 		{
-			System.out.println("Your change is "+(moneyEntered-transactionprice));
+			System.out.println("Your change is €"+(moneyEntered-transactionprice));
 		}
 		System.out.println("Transaction successful please take your product");
 		System.out.println("******************************************************");
@@ -126,9 +126,9 @@ public class VendingMachineApplication{
 	
 	public static void admin()
 	{
-		System.out.println("Total takings: �"+totalCash);
+		System.out.println("Total takings: €"+totalCash);
 		System.out.println("Number of transactions: "+numTransactions);
-		System.out.println("Average value of a transaction: �"+totalCash/numTransactions);
+		System.out.println("Average value of a transaction: €"+totalCash/numTransactions);
 		System.out.println("coke stock remaining: "+qtyCoke);
 		System.out.println("7up stock remaining: "+qty7up);
 		System.out.println("fanta stock remaining: "+qtyfanta);
